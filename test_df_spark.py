@@ -8,7 +8,7 @@ if len(sys.argv) != 3:
 
 input_bucket = sys.argv[1]
 output_bucket = sys.argv[2]
-print(input_bucket) #testing that is working
+print("Reading file = {}".format(input_bucket))  # Testing that is working
 
 df = (
     spark.read.
@@ -17,4 +17,9 @@ df = (
     option('inferSchema', 'true').
     load(input_bucket)
 )
-print(df.head())
+
+df.createOrReplaceTempView('df_table') #create temp folder using the Pyspark SQL functions
+spark.sql('''SELECT * FROM df_table''').show(5) #print the first 5 rows
+
+query = spark.sql('''SELECT * FROM df_table LIMIT 5''') #Using LIMIT instead of show
+query.write.save(sys.argv[2] + '/Query_Iris', format="json")
