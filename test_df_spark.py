@@ -8,5 +8,13 @@ if len(sys.argv) != 3:
 
 input_bucket = sys.argv[1]
 output_bucket = sys.argv[2]
-df = spark.createDataFrame(input_bucket)
+print(input_bucket) #testing that is working
+
+df = (
+    spark.read.
+    format('csv').
+    option('header', 'true').
+    option('inferSchema', 'true').
+    load(input_bucket)
+)
 print(df.head())
