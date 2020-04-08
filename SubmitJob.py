@@ -9,8 +9,8 @@ def submit_job(event, context):
     import requests
     import random
     file = event
-    print(f"File modified: {file['name']}.")
-    job_id = f'updated_files_in_bucket_{random.randint(0,99999)}'
+    print("File modified: {}.".format(file['name']) )
+    job_id = "updated_files_in_bucket_{}".format(random.randint(0,99999))
     print (job_id)  #remove this later
     data = {
         "projectId": "spark-project3",
