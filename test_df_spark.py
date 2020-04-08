@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 import sys
 from pyspark.sql import SparkSession
+from datetime import datetime
+
+date = datetime.today().strftime('%Y-%m-%d-%H:%M:%S')
+
 spark = SparkSession.builder.getOrCreate()
 
 if len(sys.argv) != 3:
@@ -22,4 +26,5 @@ df.createOrReplaceTempView('df_table') #create temp folder using the Pyspark SQL
 spark.sql('''SELECT * FROM df_table''').show(5) #print the first 5 rows
 
 query = spark.sql('''SELECT * FROM df_table LIMIT 5''') #Using LIMIT instead of show
-query.write.save(sys.argv[2] + '/Query_Iris', format="json")
+#query.write.save(sys.argv[2] + '/Query_Iris', format="json")
+query.write.save(sys.argv[2] + '/Query_Iris_' + str(date), format="json")
