@@ -1,6 +1,8 @@
 # Submitting a ML and Descriptive analysis to a Spark cluster on GCP
 ## Data Analysis in the Cloud at Scale (ECE 590.24) - Project 3
 
+This is a tutorial of how to create a cluster and submit a Pyspark job in GCP. You can see a video demostration [here]()
+
 **Previous projects**<br>
 - [Docker containerization](https://github.com/joaquinmenendez/Cloud_Computing_Project_2)<br>
 - [Continuous Delivery of Flask Application on GCP](https://github.com/joaquinmenendez/Cloud_Computing_Project_1)<br>
