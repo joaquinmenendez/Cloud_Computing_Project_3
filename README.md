@@ -30,18 +30,15 @@ gcloud dataproc clusters create $CLUSTER \
 
 Submit job to cluster    
 ```bash
-gcloud dataproc jobs submit pyspark test_df_spark.py  \
+gcloud dataproc jobs submit pyspark test_df_spark_v2.py  \
     --cluster=$CLUSTER \
     --region=$REGION  \
     -- gs://input_spark/iris.csv gs://output_spark
  ```
  
- Do this manually using the GUI
+ Do this manually using the GUI<br>
+ First, we copy the script into a bucket. In this case we are going to use `input_spark` 
  ```bash
- gsutil cp test_df_spark.py gs://input_spark/test_df_spark.py
+ gsutil cp test_df_spark_v2.py gs://input_spark/test_df_spark_v2.py
 ```
-
-
-#Submit job using POST request
-https://cloud.google.com/dataproc/docs/guides/submit-job
-Check the NOTE where it mentions how can you get the Equivalent REST request on the GUI
+![]()
