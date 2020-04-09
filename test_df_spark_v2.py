@@ -4,6 +4,7 @@ from pyspark.sql import SparkSession
 from pyspark.ml.classification import LogisticRegression
 from pyspark.ml.feature import StandardScaler
 from pyspark.ml.feature import VectorAssembler
+from pyspark.ml.feature import StringIndexer
 
 from datetime import datetime
 
@@ -27,15 +28,15 @@ df = (
 )
 
 df.createOrReplaceTempView('df_table') #create temp folder using the Pyspark SQL functions
-spark.sql('''SELECT * FROM df_table''').show(5) #print the first 5 rows
+spark.sql('''SELECT * FROM df_table''').show(5) # Print the first 5 rows
 
 #Plot the means group by variety
-spark.sql('''SELECT AVG(sepal.length, sepal.width,petal.length, petal.width) FROM df_table GROUP BY variety''').show()
+spark.sql('''SELECT MAX(sepal_length), variety FROM df_table GROUP BY variety''').show()
 
 #ML
 #Pre-process the data
 assembler = VectorAssembler(
-    inputCols=['sepal.length', 'sepal.width','petal.length','petal.width'],
+    inputCols=['sepal_length', 'sepal_width','petal_length','petal_width'],
     outputCol="raw_features")
 vector_df = assembler.transform(df)
 
