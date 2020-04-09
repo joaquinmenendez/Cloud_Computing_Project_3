@@ -1,6 +1,13 @@
 # Cloud_Computing_Project_3
 Cloud Map Reduce and Distributed Jobs
 
+**Previous projects**<br>
+[Docker containerization](https://github.com/joaquinmenendez/Cloud_Computing_Project_2)<br>
+[Continuous Delivery of Flask Application on GCP](https://github.com/joaquinmenendez/Cloud_Computing_Project_1)<br>
+**Next projects**<br>
+[Using Google Cloud Services to develop a Serverless Data Engineering Pipeline](https://github.com/joaquinmenendez/Cloud_Computing_Project_4)
+
+
 Set enviromental variables
 ```bash
 export REGION=`Region you prefer`
