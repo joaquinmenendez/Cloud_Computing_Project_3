@@ -1,5 +1,5 @@
-# Cloud_Computing_Project_3
-Cloud Map Reduce and Distributed Jobs
+# Submitting a ML and Descriptive analysis to a Spark cluster on GCP
+## Data Analysis in the Cloud at Scale (ECE 590.24) - Project 3
 
 **Previous projects**<br>
 [Docker containerization](https://github.com/joaquinmenendez/Cloud_Computing_Project_2)<br>
