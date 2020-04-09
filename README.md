@@ -1,13 +1,15 @@
 # Submitting a ML and Descriptive analysis to a Spark cluster on GCP
 ## Data Analysis in the Cloud at Scale (ECE 590.24) - Project 3
 
-This is a tutorial of how to create a cluster and submit a Pyspark job in GCP. You can see a video demostration [here]()
+This is a tutorial of how to create a cluster and submit a Pyspark job in GCP. This tutorial also explain how to store these outputs into a bucket. You can see a video demostration [here]()
+
+This could be included into a  bigger pipeline. For example, you can also create a [Cloud Function](https://github.com/joaquinmenendez/Cloud_Computing_Project_4) to trigger a process after the outputs are stored in the bucket. 
 
 **Previous projects**<br>
 - [Docker containerization](https://github.com/joaquinmenendez/Cloud_Computing_Project_2)<br>
 - [Continuous Delivery of Flask Application on GCP](https://github.com/joaquinmenendez/Cloud_Computing_Project_1)<br>
 **Next projects**<br>
-- [Using Google Cloud Services to develop a Serverless Data Engineering Pipeline](https://github.com/joaquinmenendez/Cloud_Computing_Project_4)
+- [Using Google Cloud Functions to develop a Serverless Data Engineering Pipeline](https://github.com/joaquinmenendez/Cloud_Computing_Project_4)
 
 
 Set enviromental variables
