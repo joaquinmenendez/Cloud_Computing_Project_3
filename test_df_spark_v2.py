@@ -32,15 +32,15 @@ df = (
 df.createOrReplaceTempView('df_table') #create temp folder using the Pyspark SQL functions
 spark.sql('''SELECT * FROM df_table''').show(5) # Print the first 5 rows
 
-#Plot the means group by variety
+# Plot the means group by variety
 spark.sql('''SELECT MAX(sepal_length), variety FROM df_table GROUP BY variety''').show()
-query=spark.sql('''SELECT MAX(sepal_length), variety FROM df_table GROUP BY variety''')
+query = spark.sql('''SELECT MAX(sepal_length), variety FROM df_table GROUP BY variety''')
 
-#Save the query output into a bucket
+# Save the query output into a bucket
 query.write.save(sys.argv[2] + '/Query_Iris_' + str(date), format="json")
 
-#ML
-#Pre-process the data
+# ML
+# Pre-process the data
 assembler = VectorAssembler(
     inputCols=['sepal_length', 'sepal_width','petal_length','petal_width'],
     outputCol="raw_features")
@@ -74,10 +74,11 @@ print("Intercept: " + str(LRmodel.interceptVector))
 with warnings.catch_warnings():
     warnings.simplefilter('ignore')
     prediction = LRmodel.transform(test)
+    
 # Calculate accuracy
 score = prediction.select(['label', 'prediction'])
 acc = score.rdd.map(lambda x: x[0] == x[1]).sum() / float(score.count())
 print('Accuracy: {}'.format(acc))
 
 # Save the model on the output bucket
-LRmodel.save(os.path.join(sys.argv[2] + '/Linear_Regression_Iris'))
+LRmodel.save(os.path.join(sys.argv[2] + '/Linear_Regression_Iris_'+str(date)))
