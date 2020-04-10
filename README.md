@@ -1,4 +1,4 @@
-# Submitting a Pspark job to a Spark cluster on GCP
+# Submitting a Pyspark job to a Spark cluster on GCP
 ## Data Analysis in the Cloud at Scale (ECE 590.24) - Project 3
 
 This is a tutorial of how to create a cluster and submit a Pyspark job in GCP. This tutorial also explain how to store these outputs into a bucket. You can see a video demostration [here]()
@@ -64,10 +64,10 @@ gcloud dataproc jobs submit pyspark test_df_spark_v2.py  \
     -- gs://input_spark/iris.csv gs://output_spark
  ```
  Now if we go to the logs of our job we could observe the output.
- ![]()
+ ![Job Log](https://user-images.githubusercontent.com/43391630/78952467-9ff34680-7aa3-11ea-8b45-9984cc375cd5.png)
  
  Also, we can see that now we have new files in our output bucket.
- ![]()
+ ![Bucket outpu](https://user-images.githubusercontent.com/43391630/78952861-e85f3400-7aa4-11ea-84bb-ea997d960f6d.png
  
  You can create a cluster manually using the GUI. We need to go to Datapoc/clusters and click on 'Create a new cluster'<br>
  ![Create](https://user-images.githubusercontent.com/43391630/78735282-6510d780-7918-11ea-9800-b69b82b82d2a.png)
