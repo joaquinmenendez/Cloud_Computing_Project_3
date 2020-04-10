@@ -1,7 +1,7 @@
 # Submitting a Pyspark job to a Spark cluster on GCP
 ## Data Analysis in the Cloud at Scale (ECE 590.24) - Project 3
 
-This is a tutorial of how to create a cluster and submit a Pyspark job in GCP. This tutorial also explain how to store these outputs into a bucket. You can see a video demostration [here]()
+This is a tutorial of how to create a cluster and submit a Pyspark job in GCP. This tutorial also explain how to store these outputs into a bucket. You can see a video demostration [here](https://youtu.be/r5x1te9vxK4)
 
 What are we going to do in this tutorial
 - Create a Spark cluster on GCP
