@@ -65,16 +65,19 @@ gcloud dataproc jobs submit pyspark test_df_spark_v2.py  \
  ```
  Now if we go to the logs of our job we could observe the output.
  ![Job Log](https://user-images.githubusercontent.com/43391630/78952467-9ff34680-7aa3-11ea-8b45-9984cc375cd5.png)
+  <br>
+ Also, we can see that now we have new files in our output bucket. <br>
+ ![Bucket outpu](https://user-images.githubusercontent.com/43391630/78952861-e85f3400-7aa4-11ea-84bb-ea997d960f6d.png)
  
- Also, we can see that now we have new files in our output bucket.
- ![Bucket outpu](https://user-images.githubusercontent.com/43391630/78952861-e85f3400-7aa4-11ea-84bb-ea997d960f6d.png
+ ---
+ <br>
  
  You can create a cluster manually using the GUI. We need to go to Datapoc/clusters and click on 'Create a new cluster'<br>
  ![Create](https://user-images.githubusercontent.com/43391630/78735282-6510d780-7918-11ea-9800-b69b82b82d2a.png)
  
   
  You can submit a job to aclaster manually using the GUI<br> 
- To do so, set the following configuration:
+ To do so, set the following configuration: <br>
   ![Configuration](https://user-images.githubusercontent.com/43391630/78744927-d6f51b00-7930-11ea-8aab-e496fbc46b5f.png)
   
   
