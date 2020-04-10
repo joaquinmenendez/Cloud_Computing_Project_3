@@ -27,7 +27,7 @@ git clone https://github.com/joaquinmenendez/Cloud_Computing_Project_3.git
 git clone git@github.com:joaquinmenendez/Cloud_Computing_Project_3.git
 ```
 
-Set the enviromental variables. I reccomend creating a bash file like `env_variables.sh' in order to save your configuration.
+Set the enviromental variables. I reccomend creating a bash file like `env_variables.sh` in order to save your configuration.
 ```bash
 export REGION=`Region you prefer`
 export PROJECT_ID=`Insert Project ID`
@@ -55,7 +55,7 @@ gcloud dataproc clusters create $CLUSTER \
     --single-node
 ```
 
-Submit a job to cluster. We are going to set two argument or variables ``gs://input_spark/iris.csv` and `gs://output_spark`. Our pyspark job is going to use this two argument to read and store our data. It is not necesary to pass arguments to a Pyspark job, but is a good idea to write flexible code in order to been able to use it againg the future.
+Submit a job to cluster. We are going to set two argument or variables `gs://input_spark/iris.csv` and `gs://output_spark`. Our pyspark job is going to use this two argument to read and store our data. It is not necesary to pass arguments to a Pyspark job, but is a good idea to write flexible code in order to been able to use it againg the future.
 
 ```bash
 gcloud dataproc jobs submit pyspark test_df_spark_v2.py  \
