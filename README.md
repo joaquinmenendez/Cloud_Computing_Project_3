@@ -27,7 +27,7 @@ git clone https://github.com/joaquinmenendez/Cloud_Computing_Project_3.git
 git clone git@github.com:joaquinmenendez/Cloud_Computing_Project_3.git
 ```
 
-Set the enviromental variables
+Set the enviromental variables. I reccomend creating a bash file like `env_variables.sh' in order to save your configuration.
 ```bash
 export REGION=`Region you prefer`
 export PROJECT_ID=`Insert Project ID`
@@ -69,11 +69,11 @@ gcloud dataproc jobs submit pyspark test_df_spark_v2.py  \
  Also, we can see that now we have new files in our output bucket.
  ![]()
  
- You can create a cluster manually using the GUI<br>
+ You can create a cluster manually using the GUI. We need to go to Datapoc/clusters and click on 'Create a new cluster'<br>
  ![Create](https://user-images.githubusercontent.com/43391630/78735282-6510d780-7918-11ea-9800-b69b82b82d2a.png)
-  
- You can submit a job to aclaster manually using the GUI<br>
  
+  
+ You can submit a job to aclaster manually using the GUI<br> 
  To do so, set the following configuration:
   ![Configuration](https://user-images.githubusercontent.com/43391630/78744927-d6f51b00-7930-11ea-8aab-e496fbc46b5f.png)
   
